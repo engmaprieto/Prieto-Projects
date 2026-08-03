@@ -270,11 +270,3 @@ These case studies are based on engineering and process-improvement work complet
 
 Certain company, client, product, and equipment details may be generalized to protect confidential or proprietary information.
 
-## Contact
-
-**Marcus Prieto**  
-Mechanical and Mechatronics Engineer
-
-- GitHub: [engmaprieto](https://github.com/engmaprieto)
-- LinkedIn: Add your LinkedIn profile
-- Portfolio: Add your portfolio website
