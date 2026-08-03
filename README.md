@@ -1,47 +1,280 @@
-# Prieto-Projects
-Mechanical engineering and process-improvement case studies from a food-processing manufacturing environment.
+# Prieto Engineering Projects
 
-A better explanation of the projects I have tackled as a Mechanical engineer in my family Business.
+Mechanical engineering and process-improvement case studies completed in a food-processing manufacturing environment.
 
--------------------------------------------------------------------------------------------------------------------------------
+These projects demonstrate my experience with:
 
-Project 1 :Reverse-Engineering Legacy Machine Components to Reduce Manufacturing Downtime and Import Costs
+- Mechanical design and reverse engineering
+- Manufacturing process improvement
+- Design under practical constraints
+- Equipment prototyping and testing
+- Failure analysis and risk reduction
+- Collaboration with technicians, operators, management, and local manufacturers
 
- 
-Picture 1: parts selected for initial trial
+---
 
-Problem: 
+## Projects
 
-The food processing facility I worked at operated a fleet of aging German machinery — equipment from brands like Multivac, Weber, and Handtmann, many of the machines over 45 years old. Replacement parts were expensive, slow to source internationally, and often unavailable entirely. This created a persistent drag on profitability: when a machine broke, the operation stopped, and the options were to wait weeks for an imported part or pay a steep premium for expedited sourcing.
-My entry point into this problem was practical and unplanned. I was asked to shadow a senior technician during a breakdown repair. What struck me wasn't the repair itself — it was the technician's depth of pattern recognition. He could identify failure modes before they fully materialized, and he knew from years of experience which components wore out first and why. When the repair was done and I was holding the failed part, I could see it clearly: advanced, directional wear that had been building for a long time. The failure was predictable. The cost didn't have to be.
-I brought the observation to management and proposed a different approach: instead of waiting for parts to fail and sourcing replacements abroad, we could identify the highest-frequency failure components, reverse-engineer them using dimensional measurement and CAD, and have them fabricated locally. At the time I had working knowledge of SolidWorks and a strong foundation in mechanical design from my coursework at Cal Poly, where we worked extensively with Shigley's Mechanical Engineering Design — the standard reference for stress analysis, fatigue, and tolerance work on rotating and dynamic machine components.
-The process we developed was systematic: the technician would identify the components he replaced most often — predominantly rotating parts under cyclic load — and I would measure the worn specimens, identify the underlying geometry using standard mechanical features as reference points, produce engineering drawings, and take them to a local machine shop for fabrication. The first two months were difficult. Rotating components under load exposed every tolerance and material shortcut. The most persistent problem was parts that should have been monolithic being fabricated with weld joints, which failed under cyclic stress exactly as Shigley's would predict. We worked through those failure modes iteratively, adjusting drawings and specifications each cycle.
-After roughly two months of iteration, the process stabilized. What started as an ad-hoc workaround became a standard operating practice at the facility. The result was a consistent 25–75% cost reduction on replacement parts, a shorter lead time from weeks to days, and a meaningful reduction in unplanned downtime.
-The deeper lesson I took from this wasn't about machining — it was about the leverage that lives inside undocumented operational knowledge. The technician had the pattern recognition. The problem was that it lived only in his head and had never been connected to a systematic response. Bridging that gap — turning tacit expertise into a repeatable, scalable process — is the problem I find most interesting, and the one I keep coming back to.
--------------------------------------------------------------------------------------------------------------------------------
+1. [Reverse-Engineering Legacy Machine Components](#1-reverse-engineering-legacy-machine-components)
+2. [Open-Vessel Enzymatic Hydrolysis Test Rig](#2-open-vessel-enzymatic-hydrolysis-test-rig)
+3. [Post-Cooking Shower System Redesign](#3-post-cooking-shower-system-redesign)
 
+---
 
+# 1. Reverse-Engineering Legacy Machine Components
 
+### Reducing manufacturing downtime and replacement-part costs
 
+![Components selected for the initial reverse-engineering trial](assets/images/legacy-machine-components.jpg)
 
-Improvised Bioreactor for Enzymatic Protein Hydrolysis — Makeshift Pressurized Vessel Design
-A food industry client approached the facility seeking a contract production test for a new product: enzymatic hydrolysis of animal protein using mechanically separated chicken meat (CMS), offal, and bone material. The process required simultaneous high-temperature cooking and continuous mechanical agitation to activate the enzyme at its required thermal threshold — conditions that demanded equipment the facility did not own and could not justify renting or purchasing for a single test run.
-The assignment given to me was simple in framing and dangerous in execution: build something that could do the job.
-The core engineering challenge was immediate and serious. The process required a sealed vessel capable of withstanding elevated internal pressure from steam buildup, with a heating element submerged in the contents and a rotating agitator shaft penetrating the vessel wall. In a closed pressurized system, the combination of a submerged heating element, steam pressure, and a dynamic shaft seal creates failure modes that range from seal blowout to, in the worst case, an uncontrolled pressure vessel rupture. Working from Shigley's treatment of thin-wall pressure vessel design, it became clear quickly that the tolerances available with shop fabrication and the materials on hand did not provide adequate safety margin for a fully closed system under those thermal conditions.
-The solution was a deliberate design decision: convert the system from closed to open. By allowing the vessel to vent — eliminating the pressure buildup entirely — the primary catastrophic failure mode was removed. This meant operating at or near atmospheric pressure, which the process could tolerate given that the enzyme activation temperature was achievable without requiring superatmospheric conditions. The heating element risk became manageable in an open system, and the vessel wall requirements dropped to a level achievable with available materials and shop welding.
-The rotation mechanism was built around a SEW-Eurodrive inverter-duty gearmotor (WA30 DRS71S4BE05, 0.37kW, 220/380V) sourced from existing facility inventory. The motor drove a paddle blade mounted at the end of the rotor shaft and submerged into the vessel contents, providing the continuous agitation required to keep the enzymatic reaction homogeneous throughout the cook cycle. The inverter-duty rating was relevant here — it allowed variable speed control, which mattered for managing shear forces on the protein matrix at different stages of hydrolysis.
-Fabrication combined existing vessel components, shop welding by the facility's soldering technicians, and mechanical assembly of the drive system. The result was a functional, single-use test rig that successfully ran the hydrolysis process, validated the client's product concept, and did so without purchasing or renting any specialized equipment.
-The project outcome was a successful client test. The deeper engineering lesson was about risk identification under constraint: when you can't build the safe version of a closed system, sometimes the right answer is to change the system boundary rather than fight the failure mode directly.
-   
+## Context
 
-Look at video 1 attached 
+The food-processing facility operated aging German manufacturing equipment from companies including Multivac, Weber, and Handtmann. Some machines had been in operation for more than 45 years.
 
--------------------------------------------------------------------------------------------------------------------------------
+Replacement components were expensive, slow to source internationally, and sometimes no longer commercially available. When a component failed, production could stop for weeks while the facility waited for an imported replacement or paid a significant premium for expedited sourcing.
 
-Post-Cooking Shower System Redesign — Smoked Sausage (Linguiça Defumada) Processing Line
-The final stage of smoked sausage production requires a controlled cold-water shower immediately after the cooking and smoking cycle. This step — known in meat processing as the bloom or chill shower — serves several simultaneous functions: it arrests the cooking process, sets the surface color developed during smoking, tightens the casing, and stabilizes the product's texture and moisture content before packaging. Getting it wrong means inconsistent color, case wrinkling, or product that continues cooking past the target internal temperature.
-The existing system at the facility was entirely manual and low-control: a network of pipes with drilled holes ran water at ambient room temperature over the product in a slow drip. In practice this meant the cooling rate varied with ambient temperature, water pressure fluctuations, and the uneven distribution inherent to a drip-hole design rather than a true spray pattern. The result was inconsistency in product finish — acceptable for internal production, but a liability when producing under a client's brand where appearance standards are tight.
-The redesign had two components. First, I repositioned the water supply to draw from a large reservoir held inside a cold chamber, replacing ambient-temperature tap water with consistently chilled water. This gave the system a stable, controllable inlet temperature independent of seasonal or daily ambient variation — the single biggest driver of inconsistency in the old setup. Second, I replaced the drilled-pipe drip system with variable-flow spray nozzles, which provided uniform surface coverage across the product load and allowed the flow rate to be adjusted and locked in at the value that produced the best bloom result.
-The process for dialing in the ideal parameters was iterative: running production batches at different flow rates and inlet temperatures, evaluating the product finish, and converging on the combination that produced consistent color set, casing integrity, and target core temperature drop within the required time window.
-The result was a measurable improvement in product consistency and surface quality — repeatable batch to batch, and no longer dependent on ambient conditions or operator judgment to compensate for system variability.
-Look at video 2 attached 
+## Problem
+
+While shadowing a senior technician during a breakdown repair, I observed that many equipment failures were not truly unexpected.
+
+The technician could identify recurring failure modes and knew which components were most likely to wear out based on years of practical experience. However, this knowledge had never been converted into a systematic maintenance or replacement strategy.
+
+The failure patterns were predictable. The cost and downtime did not have to be.
+
+## Engineering Approach
+
+I proposed identifying the components with the highest failure frequency, reverse-engineering them, and manufacturing replacements locally.
+
+The process involved:
+
+1. Working with the senior technician to identify frequently replaced components
+2. Inspecting worn parts and analyzing their failure patterns
+3. Reconstructing the original geometry through dimensional measurement
+4. Creating CAD models and engineering drawings
+5. Working with local machine shops to fabricate replacement parts
+6. Testing the components under production conditions
+7. Revising tolerances, materials, and manufacturing requirements based on observed failures
+
+Many of the components were rotating parts subjected to cyclic loading. Early prototypes exposed problems involving material selection, tolerances, and manufacturing methods.
+
+One recurring issue involved components that should have been machined as monolithic parts but were instead fabricated using welded joints. These joints failed under cyclic loading. We corrected the drawings and manufacturing specifications through several iterations.
+
+## Outcome
+
+After approximately two months of development and testing, the process became a standard operating practice at the facility.
+
+Results included:
+
+- **25–75% reduction in replacement-part cost**
+- **Lead-time reduction from weeks to days**
+- Reduced dependence on international suppliers
+- Reduced unplanned manufacturing downtime
+- A repeatable process for capturing technician knowledge and converting it into engineering documentation
+
+## Engineering Takeaway
+
+The most valuable lesson was not simply how to reproduce a machine component.
+
+The technician already possessed extensive knowledge of the equipment and its failure modes. The engineering opportunity was to convert that undocumented operational expertise into a repeatable and scalable process.
+
+This project reinforced my interest in connecting practical knowledge, engineering analysis, and systematic process improvement.
+
+---
+
+# 2. Open-Vessel Enzymatic Hydrolysis Test Rig
+
+### Designing a safe, low-cost system for a one-time food-processing trial
+
+![Open-vessel enzymatic hydrolysis test rig](assets/images/hydrolysis-test-rig.jpg)
+
+## Context
+
+A food-industry client approached the facility to conduct a contract-production trial for a new product involving the enzymatic hydrolysis of animal protein.
+
+The process used mechanically separated chicken meat, offal, and bone material. It required:
+
+- Elevated processing temperature
+- Continuous mechanical agitation
+- Controlled mixing during enzyme activation
+- Equipment that could handle the material throughout the cooking cycle
+
+The facility did not own suitable equipment and could not justify purchasing or renting specialized machinery for a single trial.
+
+## Problem
+
+The original concept involved a sealed vessel containing:
+
+- A submerged heating element
+- Heated biological material
+- Steam generation
+- A rotating agitator shaft penetrating the vessel wall
+
+A closed design would have created pressure-related failure modes, including:
+
+- Dynamic shaft-seal failure
+- Steam leakage
+- Seal blowout
+- Uncontrolled pressure-vessel rupture
+
+Based on the available materials, fabrication methods, and shop tolerances, the system could not be built with an acceptable safety margin as a sealed pressure vessel.
+
+## Engineering Approach
+
+Rather than attempting to strengthen the closed design, I changed the system boundary.
+
+The vessel was redesigned as an **open, vented system operating at or near atmospheric pressure**. This eliminated pressure accumulation and removed the most severe potential failure mode.
+
+The process temperature required for enzyme activation could still be achieved without operating above atmospheric pressure.
+
+The agitation system used a:
+
+- **SEW-Eurodrive inverter-duty gearmotor**
+- Model: **WA30 DRS71S4BE05**
+- Power: **0.37 kW**
+- Voltage: **220/380 V**
+
+The motor drove a submerged paddle attached to the rotor shaft. Variable-speed operation allowed the agitation rate to be adjusted during different stages of the hydrolysis process.
+
+Fabrication combined:
+
+- Existing vessel components
+- Materials available at the facility
+- Shop welding and fabrication
+- Mechanical assembly of the motor and agitator
+- Iterative testing under operating conditions
+
+## Outcome
+
+The resulting system successfully completed the production trial and validated the client’s product concept.
+
+The project:
+
+- Avoided the purchase or rental of specialized equipment
+- Provided continuous agitation throughout the cooking cycle
+- Achieved the required process temperature
+- Removed the principal pressure-related hazard
+- Enabled the facility to complete the client trial using existing resources
+
+## Engineering Takeaway
+
+The central lesson was that engineering under constraint does not always mean improving the original design.
+
+When the safe version of a proposed system cannot be built using the available materials, manufacturing methods, or budget, the correct response may be to redefine the system itself.
+
+In this case, changing the design from closed to open was more effective than attempting to manage the pressure-related failure modes directly.
+
+### Project Media
+
+[Watch the hydrolysis test-rig video](assets/videos/hydrolysis-test-rig.mp4)
+
+---
+
+# 3. Post-Cooking Shower System Redesign
+
+### Improving consistency in smoked-sausage production
+
+![Post-cooking shower system](assets/images/post-cooking-shower-system.jpg)
+
+## Context
+
+Smoked sausage production requires a controlled cold-water shower immediately after the cooking and smoking cycle.
+
+This process, sometimes called a bloom or chill shower, helps:
+
+- Stop the cooking process
+- Set the surface color developed during smoking
+- Tighten the casing
+- Stabilize product texture
+- Control moisture before packaging
+- Reduce the product’s internal temperature
+
+Poor control during this stage can produce inconsistent coloring, wrinkled casings, and continued cooking beyond the target internal temperature.
+
+## Problem
+
+The facility’s original cooling system consisted of pipes with manually drilled holes that allowed ambient-temperature water to drip over the product.
+
+The system had several sources of variability:
+
+- Ambient water-temperature changes
+- Seasonal temperature variation
+- Water-pressure fluctuations
+- Uneven distribution across the product
+- Dependence on operator judgment
+- Limited control over cooling rate and spray coverage
+
+The resulting product finish was inconsistent. This became particularly important when manufacturing products under a client’s brand, where surface appearance and batch-to-batch consistency were critical.
+
+## Engineering Approach
+
+The redesign addressed both water temperature and distribution.
+
+### Temperature Control
+
+I rerouted the water supply through a large reservoir located inside a cold chamber.
+
+This replaced ambient-temperature water with a consistently chilled supply and reduced variation caused by weather, season, and facility temperature.
+
+### Water Distribution
+
+I replaced the drilled-pipe drip system with variable-flow spray nozzles.
+
+The nozzles provided:
+
+- More uniform surface coverage
+- Greater control over water flow
+- A repeatable spray pattern
+- Adjustable operating parameters
+- Reduced dependence on operator compensation
+
+### Process Optimization
+
+The operating parameters were refined iteratively by testing different combinations of:
+
+- Water-inlet temperature
+- Flow rate
+- Spray duration
+- Product core-temperature reduction
+- Surface-color development
+- Casing condition
+
+The selected settings produced the most consistent balance of cooling performance and product appearance.
+
+## Outcome
+
+The redesigned system produced:
+
+- More consistent surface color
+- Improved casing integrity
+- More uniform cooling
+- Repeatable batch-to-batch results
+- Reduced sensitivity to ambient conditions
+- Reduced dependence on operator judgment
+- Greater control over the post-cooking process
+
+## Engineering Takeaway
+
+This project demonstrated that relatively simple changes to process inputs can significantly improve manufacturing consistency.
+
+By controlling water temperature and distribution, the system replaced an operator-dependent process with one that was more measurable, adjustable, and repeatable.
+
+### Project Media
+
+[Watch the post-cooking shower video](assets/videos/post-cooking-shower-system.mp4)
+
+---
+
+## About This Repository
+
+These case studies are based on engineering and process-improvement work completed in a family-owned food-processing business.
+
+Certain company, client, product, and equipment details may be generalized to protect confidential or proprietary information.
+
+## Contact
+
+**Marcus Prieto**  
+Mechanical and Mechatronics Engineer
+
+- GitHub: [engmaprieto](https://github.com/engmaprieto)
+- LinkedIn: Add your LinkedIn profile
+- Portfolio: Add your portfolio website
