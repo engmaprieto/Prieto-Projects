@@ -25,7 +25,7 @@ These projects demonstrate my experience with:
 
 ### Reducing manufacturing downtime and replacement-part costs
 
-![Components selected for the initial reverse-engineering trial](assets/images/legacy-machine-components.jpg)
+![Components selected for the initial reverse-engineering trial](assets/images/legacy-machine-components.png)
 
 ## Context
 
@@ -85,7 +85,7 @@ This project reinforced my interest in connecting practical knowledge, engineeri
 
 ### Designing a safe, low-cost system for a one-time food-processing trial
 
-![Open-vessel enzymatic hydrolysis test rig](assets/images/hydrolysis-test-rig.jpg)
+![Open-vessel enzymatic hydrolysis test rig](assets/images/hydrolysis-test-rig.png)
 
 ## Context
 
@@ -173,7 +173,7 @@ In this case, changing the design from closed to open was more effective than at
 
 ### Improving consistency in smoked-sausage production
 
-![Post-cooking shower system](assets/images/post-cooking-shower-system.jpg)
+![Post-cooking shower system](assets/images/post-cooking-shower-system.png)
 
 ## Context
 
