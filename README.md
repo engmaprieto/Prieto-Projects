@@ -173,8 +173,6 @@ In this case, changing the design from closed to open was more effective than at
 
 ### Improving consistency in smoked-sausage production
 
-![Post-cooking shower system](assets/images/post-cooking-shower-system.png)
-
 ## Context
 
 Smoked sausage production requires a controlled cold-water shower immediately after the cooking and smoking cycle.
